@@ -124,7 +124,7 @@ defmodule Samly.AuthHandler do
         )
 
       _ ->
-        conn |> send_resp(403, "access_denied")
+        conn |> redirect(302, target_url)
     end
 
     # rescue
